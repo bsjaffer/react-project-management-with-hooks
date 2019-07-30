@@ -1,17 +1,13 @@
-import React, { Component } from "react";
-import UserItem from "./userItem.js";
-
-export default function UserListing() {
-  const users = [
+import React from "react";
+export default function ProjectListing() {
+  const projects = [
     {
-      firstName: "Pavan",
-      lastName: "lastname",
-      employeeId: "001"
-    },
-    {
-      firstName: "Pavan",
-      lastName: "lastname",
-      employeeId: "002"
+      projectName: "Project name",
+      noOfTasks: 10,
+      startDate: "10/1/2019",
+      endDate: "10/03/2019",
+      completed: "true",
+      priority: 5
     }
   ];
   return (
@@ -22,20 +18,20 @@ export default function UserListing() {
           <div className="mr-2">Sort By :</div>
           <nav class="nav nav-pills flex-column flex-sm-row">
             <a class="flex-sm-fill text-sm-center nav-link active" href="#">
-              FirstName
+              StartDate
             </a>
             <a class="flex-sm-fill text-sm-center nav-link" href="#">
-              LastName
+              EndDate
             </a>
             <a class="flex-sm-fill text-sm-center nav-link" href="#">
-              EmployeeId
+              Priority
+            </a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="#">
+              Completed
             </a>
           </nav>
         </div>
       </div>
-      {users.map(user => {
-        return <UserItem {...user} />;
-      })}
     </div>
   );
 }

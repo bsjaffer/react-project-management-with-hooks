@@ -3,6 +3,8 @@ import logo from "./logo.svg";
 import "./App.scss";
 import UserPage from "./pages/userPage";
 import ProjectPage from "./pages/projectPage";
+import TaskPage from "./pages/taskPage";
+import TaskViewPage from "./pages/taskViewPage";
 
 function App() {
   const [page, setPage] = useState("user");
@@ -50,8 +52,8 @@ function App() {
         </ul>
         {page === "user" && <UserPage />}
         {page === "project" && <ProjectPage />}
-        {page === "task" && <UserPage />}
-        {page === "viewtask" && <UserPage />}
+        {page === "task" && <TaskPage />}
+        {page === "viewtask" && <TaskViewPage />}
       </div>
     </div>
   );

@@ -1,18 +1,13 @@
 import React, { Component } from "react";
-import AddUser from "../components/user/addUser";
-import UserListing from "../components/user/userListing";
-export default class ProjectPage extends Component {
-  constructor(props) {
-    super(props);
-  }
+import AddProject from "../components/project/addProject";
+import ProjectListing from "../components/project/projectListing";
 
-  render() {
-    return (
-      <div className="mt-5">
-        <AddUser />
+export default function ProjectPage() {
+  return (
+    <div className="mt-5">
+      <AddProject />
 
-        <UserListing />
-      </div>
-    );
-  }
+      <ProjectListing />
+    </div>
+  );
 }
