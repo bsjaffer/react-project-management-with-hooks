@@ -1,5 +1,6 @@
 import React from "react";
+import TaskListing from "../components/task/taskListing.js";
 
 export default function TaskViewPage() {
-  return <div>Not implemented yet.</div>;
+  return <TaskListing />;
 }

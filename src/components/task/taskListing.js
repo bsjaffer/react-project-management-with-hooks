@@ -1,12 +1,12 @@
 import React from "react";
+import TaskItem from "./taskItem";
 export default function ProjectListing() {
-  const projects = [
+  const tasks = [
     {
-      projectName: "Project name",
-      noOfTasks: 10,
+      taskName: "Project name",
+      parentTaskName: "Parent task Name",
       startDate: "10/1/2019",
       endDate: "10/03/2019",
-      completed: "true",
       priority: 5
     }
   ];
@@ -32,6 +32,9 @@ export default function ProjectListing() {
           </nav>
         </div>
       </div>
+      {tasks.map(task => {
+        return <TaskItem {...task} />;
+      })}
     </div>
   );
 }
